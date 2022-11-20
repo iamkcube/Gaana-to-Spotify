@@ -39,7 +39,9 @@ def fetch_songs(driver):
 	# Stores the textContent in a list
 	songsList = [ item.text.replace("\n"," ") for item in container ]
 
-	print(songsList)
+	for index, song in enumerate(songsList, 1):
+		print(f'{index}. {song}')
+	# print(songsList)
 	return songsList
 
 def search(driver, song):
@@ -83,12 +85,13 @@ def addFirstSong(driver , song , to_playlist = False , playlist_name = ""):
 
 
 
-
+# TODO : remove bottom one-trust container cookie policy 
 def main():
 	# Initial Opening of website
 	s = Service(r"chromedriver_win32/chromedriver.exe")
 	driver = webdriver.Chrome(service=s)
 	driver.get("https://gaana.com/songs")
+	driver.maximize_window()
 
 
 	songsList = fetch_songs(driver = driver)

@@ -28,6 +28,8 @@ Install dependencies
 Download the latest Chrome Webdrivers from [here](https://sites.google.com/chromium.org/driver/).
 (unzip and keep in the same folder as main.py)
 
+**Please make a playlist named `Trending` before running this.**
+
 Start the Program
 
 ```bash
